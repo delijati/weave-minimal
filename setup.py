@@ -5,11 +5,13 @@ from sys import version_info
 from setuptools import setup, find_packages
 
 if version_info < (3, 0):
-    requires = ['werkzeug>=0.8']
+    requires = ['werkzeug>=0.8',
+                'pytest']
     if version_info < (2, 7):
         requires += ["argparse"]
 else:
-    requires = ['werkzeug>=0.9']
+    requires = ['werkzeug>=0.9',
+                'pytest']
 
 setup(
     name='weave-minimal',
